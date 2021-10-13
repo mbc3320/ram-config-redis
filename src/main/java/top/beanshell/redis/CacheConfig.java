@@ -58,8 +58,8 @@ public class CacheConfig extends CachingConfigurerSupport {
 
     /**
      * RedisTemplate with prefix for Object
-     * @param factory
-     * @return
+     * @param factory  connection factory
+     * @return  redisTemplate for String
      */
     @Bean
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
@@ -72,8 +72,8 @@ public class CacheConfig extends CachingConfigurerSupport {
 
     /**
      * RedisTemplate with prefix for Integer
-     * @param factory
-     * @return
+     * @param factory connection factory
+     * @return   redisTemplate for Integer
      */
     @Bean
     public RedisTemplate<String, Integer> redisIntegerTemplate(RedisConnectionFactory factory) {
@@ -86,8 +86,8 @@ public class CacheConfig extends CachingConfigurerSupport {
 
     /**
      * RedisTemplate with prefix for Long
-     * @param factory
-     * @return
+     * @param factory connection factory
+     * @return    redisTemplate for Long
      */
     @Bean
     public RedisTemplate<String, Long> redisLongTemplate(RedisConnectionFactory factory) {
@@ -100,8 +100,8 @@ public class CacheConfig extends CachingConfigurerSupport {
 
     /**
      * RedisTemplate with prefix for String
-     * @param factory
-     * @return
+     * @param factory connection factory
+     * @return    redisTemplate for String
      */
     @Bean
     public RedisTemplate<String, String> redisStringTemplate(RedisConnectionFactory factory) {
@@ -114,8 +114,8 @@ public class CacheConfig extends CachingConfigurerSupport {
 
     /**
      * RedisTemplate with prefix for Boolean
-     * @param factory
-     * @return
+     * @param factory connection factory
+     * @return    redisTemplate for Boolean
      */
     @Bean
     public RedisTemplate<String, Boolean> redisBooleanTemplate(RedisConnectionFactory factory) {
@@ -128,8 +128,8 @@ public class CacheConfig extends CachingConfigurerSupport {
 
     /**
      * RedisTemplate with prefix for Double
-     * @param factory
-     * @return
+     * @param factory connection factory
+     * @return    redisTemplate for Double
      */
     @Bean
     public RedisTemplate<String, Double> redisDoubleTemplate(RedisConnectionFactory factory) {
@@ -142,8 +142,8 @@ public class CacheConfig extends CachingConfigurerSupport {
 
     /**
      * RedisTemplate with prefix for Float
-     * @param factory
-     * @return
+     * @param factory connection factory
+     * @return    redisTemplate for Float
      */
     @Bean
     public RedisTemplate<String, Float> redisFloatTemplate(RedisConnectionFactory factory) {
@@ -156,8 +156,8 @@ public class CacheConfig extends CachingConfigurerSupport {
 
     /**
      * RedisTemplate with prefix for Short
-     * @param factory
-     * @return
+     * @param factory connection factory
+     * @return    redisTemplate for Short
      */
     @Bean
     public RedisTemplate<String, Short> redisShortTemplate(RedisConnectionFactory factory) {
@@ -170,8 +170,8 @@ public class CacheConfig extends CachingConfigurerSupport {
 
     /**
      * RedisTemplate with prefix for Byte
-     * @param factory
-     * @return
+     * @param factory connection factory
+     * @return    redisTemplate for Byte
      */
     @Bean
     public RedisTemplate<String, Byte> redisByteTemplate(RedisConnectionFactory factory) {
@@ -189,7 +189,7 @@ public class CacheConfig extends CachingConfigurerSupport {
 
     /**
      * redis cache config
-     * @return
+     * @return cacheConfig
      */
     @Bean
     public RedisCacheConfiguration redisCacheConfiguration() {
@@ -209,8 +209,8 @@ public class CacheConfig extends CachingConfigurerSupport {
 
     /**
      * cache manager
-     * @param connectionFactory
-     * @return
+     * @param connectionFactory connection factory
+     * @return  cache manager instance
      */
     @Bean
     public RedisCacheManager cacheManager(RedisConnectionFactory connectionFactory) {
